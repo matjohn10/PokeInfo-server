@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const dotenv = require("dotenv");
 dotenv.config();
-const API = "http://127.0.0.1:5000/api"; //change when deployed process.env.API_URL
+const API = process.env.API_URL; //change when deployed "http://127.0.0.1:5000/api"
 console.log(API);
 const axios = require("axios");
 const path = require("path");

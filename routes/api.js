@@ -15,7 +15,7 @@ router.get("/pokemons", async (req, res) => {
     let result = await axios.get(API + "/pokemons");
     res.send(result.data);
   } catch (error) {
-    if (error.response.status === 404)
+    if (error.response?.status === 404)
       res.sendFile(path.join(__dirname, "../views/404.html"));
   }
 });
